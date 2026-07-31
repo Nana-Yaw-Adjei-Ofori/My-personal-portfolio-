@@ -1,1 +1,8 @@
 
+
+// Mobile nav toggle const burger = document.script.js
+// Mobile nav toggle const burger = document.getElementById('burger'); const navLinks = document.getElementById('navLinks'); burger.addEventListener('click', () => navLinks.classList.toggle('open')); navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open'))); // Scroll reveal const revealEls = document.querySelectorAll('.reveal'); const io = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+}); }, { threshold: 0.15 }); revealEls.forEach(el => io.observe(el)); // Back to top button const backTop = document.getElementById('backTop'); window.addEventListener('scroll', () => { if (window.scrollY > 500) backTop.classList.add('show'); else backTop.classList.remove('show'); }); backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' })); // Footer year document.getElementById('year').textContent = new Date().getFullYear(); // Contact form (front-end only demo) const form = document.getElementById('contactForm'); const status = document.getElementById('formStatus'); form.addEventListener('submit', (e) => {
+e.preventDefault(); status.textContent = "Thanks — message captured. Connect this form to an email service (e.g. Formspree) to receive it in your inbox."; form.reset(); }); // Download CV placeholder document.getElementById('downloadCv').addEventListener('click', (e) => {
+e.preventDefault(); alert("Add your CV PDF to the project folder and update this button's link to point to it (e.g. href=\"NanaYawAdjeiOfori-CV.pdf\").");
+});
